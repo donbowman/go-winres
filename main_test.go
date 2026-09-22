@@ -287,7 +287,7 @@ func copyFile(t *testing.T, src, dst string) {
 func makeTmpDir(t *testing.T) func() {
 	os.RemoveAll(tmpDir)
 
-	err := os.MkdirAll(tmpDir, 0666)
+	err := os.MkdirAll(tmpDir, 0777)
 	if err != nil {
 		t.Fatal(err)
 	}
